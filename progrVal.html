@@ -1,0 +1,4167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProgrVal</title>
+    <ul>
+      <li><a href="progrVal.html">1. ProgrVal</a></li>
+      <li><a href="uzbuve.html">2. Uzbuve</a></li>
+    </ul>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="score-container">
+      Score: <span id="score">0</span>/<span id="total-questions">2</span>
+      <div>High Score: <span id="high-score">0</span></div>
+    </div>
+
+    <h1>ProgrVal</h1>
+
+    <div class="question">
+      <p>1. Kādam mērķim programmēšanas valodās izmanto ciklus?</p>
+      <label>
+        <input type="radio" name="q1" value="a" onclick="checkAnswer(1, 'a')" />
+        a) lai izvadītu informāciju uz ekrāna </label
+      ><br />
+      <label>
+        <input type="radio" name="q1" value="b" onclick="checkAnswer(1, 'b')" />
+        b) lai kādas darbības atkārtotu vairākas reizes </label
+      ><br />
+      <label>
+        <input type="radio" name="q1" value="c" onclick="checkAnswer(1, 'c')" />
+        c) lai izvēlētos vienu variantu no vairākiem </label
+      ><br />
+      <label>
+        <input type="radio" name="q1" value="d" onclick="checkAnswer(1, 'd')" />
+        d) lai salīdzinātu divas vērtības
+      </label>
+      <div id="feedback1" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>2. Kas ir viendimensiju masīva elementa indekss?</p>
+      <label>
+        <input type="radio" name="q2" value="a" onclick="checkAnswer(2, 'a')" />
+        a) masīva elementa vērtība </label
+      ><br />
+      <label>
+        <input type="radio" name="q2" value="b" onclick="checkAnswer(2, 'b')" />
+        b) masīva elementa numurs </label
+      ><br />
+      <label>
+        <input type="radio" name="q2" value="c" onclick="checkAnswer(2, 'c')" />
+        c) masīva rindas numurs </label
+      ><br />
+      <label>
+        <input type="radio" name="q2" value="d" onclick="checkAnswer(2, 'd')" />
+        d) masīva kolonas numurs
+      </label>
+      <div id="feedback2" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>3. Kā izpaužas rekursija?</p>
+      <label>
+        <input type="radio" name="q3" value="a" onclick="checkAnswer(3, 'a')" />
+        a) apakšprogramma izsauc pati sevi </label
+      ><br />
+      <label>
+        <input type="radio" name="q3" value="b" onclick="checkAnswer(3, 'b')" />
+        b) apakšprogramma izsauc apakšprogrammu, kas uzrakstīta augstāk </label
+      ><br />
+      <label>
+        <input type="radio" name="q3" value="c" onclick="checkAnswer(3, 'c')" />
+        c) apakšprogramma izsauc apakšprogrammu, kas uzrakstīta zemāk </label
+      ><br />
+      <label>
+        <input type="radio" name="q3" value="d" onclick="checkAnswer(3, 'd')" />
+        d) apakšprogramma izsauc standartprocedūru
+      </label>
+      <div id="feedback3" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>4. Kas ir „klase”?</p>
+      <label>
+        <input type="radio" name="q4" value="a" onclick="checkAnswer(4, 'a')" />
+        a) programmēšanas valodas operators </label
+      ><br />
+      <label>
+        <input type="radio" name="q4" value="b" onclick="checkAnswer(4, 'b')" />
+        b) sakārtots vienāda tipa elementu kopums </label
+      ><br />
+      <label>
+        <input type="radio" name="q4" value="c" onclick="checkAnswer(4, 'c')" />
+        c) datu tips, kurš ietver datu elementus un to apstrādāšanas metodes </label
+      ><br />
+      <label>
+        <input type="radio" name="q4" value="d" onclick="checkAnswer(4, 'd')" />
+        d) funkcijas tips, kurš apstrādā dažādu tipu datu laukus
+      </label>
+      <div id="feedback4" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>5. Kas ir programmas mazākā izpildāmā vienība?</p>
+      <label>
+        <input type="radio" name="q5" value="a" onclick="checkAnswer(5, 'a')" />
+        a) operators </label
+      ><br />
+      <label>
+        <input type="radio" name="q5" value="b" onclick="checkAnswer(5, 'b')" />
+        b) operands </label
+      ><br />
+      <label>
+        <input type="radio" name="q5" value="c" onclick="checkAnswer(5, 'c')" />
+        c) teikums </label
+      ><br />
+      <label>
+        <input type="radio" name="q5" value="d" onclick="checkAnswer(5, 'd')" />
+        d) parametrs
+      </label>
+      <div id="feedback5" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>6. Kādiem mērķiem programmēšanas valodās izmanto sazarojumus?</p>
+      <label>
+        <input type="radio" name="q6" value="a" onclick="checkAnswer(6, 'a')" />
+        a) lai izvadītu informāciju uz ekrāna </label
+      ><br />
+      <label>
+        <input type="radio" name="q6" value="b" onclick="checkAnswer(6, 'b')" />
+        b) lai kādas darbības atkārtotu vairākas reizes </label
+      ><br />
+      <label>
+        <input type="radio" name="q6" value="c" onclick="checkAnswer(6, 'c')" />
+        c) lai izvēlētos vienu no programmas izpildes ceļiem </label
+      ><br />
+      <label>
+        <input type="radio" name="q6" value="d" onclick="checkAnswer(6, 'd')" />
+        d) lai noteiktā programmas vietā izpildītu nevis vienu, bet vairākus
+        operatorus
+      </label>
+      <div id="feedback6" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        7. Kas programmēšanas valodās pēc noklusējuma kalpo par standarta
+        izvades plūsmu?
+      </p>
+      <label>
+        <input type="radio" name="q7" value="a" onclick="checkAnswer(7, 'a')" />
+        a) RAM </label
+      ><br />
+      <label>
+        <input type="radio" name="q7" value="b" onclick="checkAnswer(7, 'b')" />
+        b) disks </label
+      ><br />
+      <label>
+        <input type="radio" name="q7" value="c" onclick="checkAnswer(7, 'c')" />
+        c) monitors </label
+      ><br />
+      <label>
+        <input type="radio" name="q7" value="d" onclick="checkAnswer(7, 'd')" />
+        d) printeris
+      </label>
+      <div id="feedback7" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        8. Cik baitu atmiņā C++ un Pascal valodās aizņem char tipa mainīgais?
+      </p>
+      <label>
+        <input type="radio" name="q8" value="a" onclick="checkAnswer(8, 'a')" />
+        a) 2 </label
+      ><br />
+      <label>
+        <input type="radio" name="q8" value="b" onclick="checkAnswer(8, 'b')" />
+        b) 0 </label
+      ><br />
+      <label>
+        <input type="radio" name="q8" value="c" onclick="checkAnswer(8, 'c')" />
+        c) 1 </label
+      ><br />
+      <label>
+        <input type="radio" name="q8" value="d" onclick="checkAnswer(8, 'd')" />
+        d) 4
+      </label>
+      <div id="feedback8" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>9. Kas ir dinamiskie mainīgie?</p>
+      <label>
+        <input type="radio" name="q9" value="a" onclick="checkAnswer(9, 'a')" />
+        a) mainīgie, kuriem vieta atmiņā tiek izdalīta un atbrīvota programmas
+        darbības laikā </label
+      ><br />
+      <label>
+        <input type="radio" name="q9" value="b" onclick="checkAnswer(9, 'b')" />
+        b) mainīgie, kuru vērtības var mainīt programmas darbības laikā </label
+      ><br />
+      <label>
+        <input type="radio" name="q9" value="c" onclick="checkAnswer(9, 'c')" />
+        c) mainīgie, kuru vērtības nedrīkst mainīt programmas darbības laikā </label
+      ><br />
+      <label>
+        <input type="radio" name="q9" value="d" onclick="checkAnswer(9, 'd')" />
+        d) mainīgie, kuriem vieta atmiņā tiek izdalīta pirms programmas
+        kompilēšanas
+      </label>
+      <div id="feedback9" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>10. Kas ir translators?</p>
+      <label>
+        <input
+          type="radio"
+          name="q10"
+          value="a"
+          onclick="checkAnswer(10, 'a')"
+        />
+        a) tulkotājs no augstā līmeņa programmēšanas valodas uz zemā līmeņa
+        valodu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q10"
+          value="b"
+          onclick="checkAnswer(10, 'b')"
+        />
+        b) tulkotājs no vienas mašīnas komandu valodas uz citas mašīnas valodu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q10"
+          value="c"
+          onclick="checkAnswer(10, 'c')"
+        />
+        c) tulkotājs no mašīnvalodas uz augstā līmeņa valodu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q10"
+          value="d"
+          onclick="checkAnswer(10, 'd')"
+        />
+        d) jebkura programma mašīnvalodā
+      </label>
+      <div id="feedback10" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        11. Kuras bāzes klases metodes ir obligāti jāpārdefinē atvasinātajā
+        klasē?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q11"
+          value="a"
+          onclick="checkAnswer(11, 'a')"
+        />
+        a) statiskās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q11"
+          value="b"
+          onclick="checkAnswer(11, 'b')"
+        />
+        b) abstraktās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q11"
+          value="c"
+          onclick="checkAnswer(11, 'c')"
+        />
+        c) publiskās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q11"
+          value="d"
+          onclick="checkAnswer(11, 'd')"
+        />
+        d) aizsargātās
+      </label>
+      <div id="feedback11" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        12. Kas ir programmēšanas valodās netipiskie vai ārkārtējie apstākļi,
+        kas prasa īpašu apstrādi?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q12"
+          value="a"
+          onclick="checkAnswer(12, 'a')"
+        />
+        a) izņēmumi (exception) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q12"
+          value="b"
+          onclick="checkAnswer(12, 'b')"
+        />
+        b) funkcijas (function) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q12"
+          value="c"
+          onclick="checkAnswer(12, 'c')"
+        />
+        c) operācijas (operation) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q12"
+          value="d"
+          onclick="checkAnswer(12, 'd')"
+        />
+        d) metodes (member function)
+      </label>
+      <div id="feedback12" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>13. Kas OOP ļauj veidot jaunas klases uz jau esošo klašu bāzes?</p>
+      <label>
+        <input
+          type="radio"
+          name="q13"
+          value="a"
+          onclick="checkAnswer(13, 'a')"
+        />
+        a) mantošana </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q13"
+          value="b"
+          onclick="checkAnswer(13, 'b')"
+        />
+        b) tipu abstrakcija </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q13"
+          value="c"
+          onclick="checkAnswer(13, 'c')"
+        />
+        c) pārslogošana </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q13"
+          value="d"
+          onclick="checkAnswer(13, 'd')"
+        />
+        d) pārdefinēšana
+      </label>
+      <div id="feedback13" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        14. Kuras datu struktūras neļauj apvienot zem viena nosaukuma vairākus
+        datus?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q14"
+          value="a"
+          onclick="checkAnswer(14, 'a')"
+        />
+        a) ieraksti </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q14"
+          value="b"
+          onclick="checkAnswer(14, 'b')"
+        />
+        b) masīvi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q14"
+          value="c"
+          onclick="checkAnswer(14, 'c')"
+        />
+        c) dinamiskie masīvi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q14"
+          value="d"
+          onclick="checkAnswer(14, 'd')"
+        />
+        d) decimālās konstantes
+      </label>
+      <div id="feedback14" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        15. Kuri klases atribūti pieder pašai klasei (visiem klases objektiem),
+        nevis tikai konkrētajam objektam?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q15"
+          value="a"
+          onclick="checkAnswer(15, 'a')"
+        />
+        a) statiskie </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q15"
+          value="b"
+          onclick="checkAnswer(15, 'b')"
+        />
+        b) abstraktie </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q15"
+          value="c"
+          onclick="checkAnswer(15, 'c')"
+        />
+        c) publiskie </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q15"
+          value="d"
+          onclick="checkAnswer(15, 'd')"
+        />
+        d) dinamiskie
+      </label>
+      <div id="feedback15" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        16. Cik konstruktoru un destruktoru var būt klasei OOP valodās C++, C#,
+        Object Pascal un JAVA?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q16"
+          value="a"
+          onclick="checkAnswer(16, 'a')"
+        />
+        a) viens konstruktors un viens destruktors </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q16"
+          value="b"
+          onclick="checkAnswer(16, 'b')"
+        />
+        b) viens konstruktors un vairāki destruktori </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q16"
+          value="c"
+          onclick="checkAnswer(16, 'c')"
+        />
+        c) vairāki konstruktori un viens destruktors </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q16"
+          value="d"
+          onclick="checkAnswer(16, 'd')"
+        />
+        d) vairāki konstruktori un vairāki destruktori
+      </label>
+      <div id="feedback16" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>17. Kas ir Delphi?</p>
+      <label>
+        <input
+          type="radio"
+          name="q17"
+          value="a"
+          onclick="checkAnswer(17, 'a')"
+        />
+        a) kompilators </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q17"
+          value="b"
+          onclick="checkAnswer(17, 'b')"
+        />
+        b) kļūdu labotājs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q17"
+          value="c"
+          onclick="checkAnswer(17, 'c')"
+        />
+        c) integrēta izstrādes vide </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q17"
+          value="d"
+          onclick="checkAnswer(17, 'd')"
+        />
+        d) atkļūdotājs
+      </label>
+      <div id="feedback17" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        18. Kas ir kopīgs programmēšanas valodu operatoriem for, while un repeat
+        (vai do...while)?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q18"
+          value="a"
+          onclick="checkAnswer(18, 'a')"
+        />
+        a) visiem jāpalielina skaitītājs par 1 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q18"
+          value="b"
+          onclick="checkAnswer(18, 'b')"
+        />
+        b) visi ir cikla operatori </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q18"
+          value="c"
+          onclick="checkAnswer(18, 'c')"
+        />
+        c) visi ir nosacījuma operatori </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q18"
+          value="d"
+          onclick="checkAnswer(18, 'd')"
+        />
+        d) visiem skaitītājs palielinās automātiski
+      </label>
+      <div id="feedback18" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        19. Kuras datu struktūras realizācijai programmēšanas valodās ir
+        paredzētas konstrukcijas struct vai record?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q19"
+          value="a"
+          onclick="checkAnswer(19, 'a')"
+        />
+        a) rakstzīmju virknei </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q19"
+          value="b"
+          onclick="checkAnswer(19, 'b')"
+        />
+        b) ierakstam </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q19"
+          value="c"
+          onclick="checkAnswer(19, 'c')"
+        />
+        c) reālam skaitlim </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q19"
+          value="d"
+          onclick="checkAnswer(19, 'd')"
+        />
+        d) masīvam
+      </label>
+      <div id="feedback19" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>20. Kas ir masīvs programmēšanās valodās Pascal, JAVA, C# vai C++?</p>
+      <label>
+        <input
+          type="radio"
+          name="q20"
+          value="a"
+          onclick="checkAnswer(20, 'a')"
+        />
+        a) ierobežots vienāda tipa elementu kopums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q20"
+          value="b"
+          onclick="checkAnswer(20, 'b')"
+        />
+        b) sakārtots dažādu tipu elementu kopums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q20"
+          value="c"
+          onclick="checkAnswer(20, 'c')"
+        />
+        c) ierobežots dažādu tipu elementu kopums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q20"
+          value="d"
+          onclick="checkAnswer(20, 'd')"
+        />
+        d) elementu kopa, kas ir izvēlēta no noteikta vērtību komplekta
+      </label>
+      <div id="feedback20" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>21. Kurš no šiem cikliem ir cikls ar pēcnosacījumu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q21"
+          value="a"
+          onclick="checkAnswer(21, 'a')"
+        />
+        a) while </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q21"
+          value="b"
+          onclick="checkAnswer(21, 'b')"
+        />
+        b) repeat (vai do...while) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q21"
+          value="c"
+          onclick="checkAnswer(21, 'c')"
+        />
+        c) if </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q21"
+          value="d"
+          onclick="checkAnswer(21, 'd')"
+        />
+        d) for
+      </label>
+      <div id="feedback21" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>22. Kurš ir pareizs apgalvojums par if operatora nosacījuma daļu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q22"
+          value="a"
+          onclick="checkAnswer(22, 'a')"
+        />
+        a) to var nenorādīt, ja nav else daļas </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q22"
+          value="b"
+          onclick="checkAnswer(22, 'b')"
+        />
+        b) tas ir obligāti jānorāda </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q22"
+          value="c"
+          onclick="checkAnswer(22, 'c')"
+        />
+        c) to var nenorādīt, ja ir else daļa </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q22"
+          value="d"
+          onclick="checkAnswer(22, 'd')"
+        />
+        d) to var nenorādīt, ja atļauj programmēšanas valoda
+      </label>
+      <div id="feedback22" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        23. Kurš operators pārtrauc cikla izpildi un nodod vadību nākamajai
+        komandai aiz cikla?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q23"
+          value="a"
+          onclick="checkAnswer(23, 'a')"
+        />
+        a) break </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q23"
+          value="b"
+          onclick="checkAnswer(23, 'b')"
+        />
+        b) continue </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q23"
+          value="c"
+          onclick="checkAnswer(23, 'c')"
+        />
+        c) gotoxy </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q23"
+          value="d"
+          onclick="checkAnswer(23, 'd')"
+        />
+        d) default
+      </label>
+      <div id="feedback23" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>24. Kura metode izveido klases objektu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q24"
+          value="a"
+          onclick="checkAnswer(24, 'a')"
+        />
+        a) iekļautā funkcija </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q24"
+          value="b"
+          onclick="checkAnswer(24, 'b')"
+        />
+        b) ārējā funkcija </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q24"
+          value="c"
+          onclick="checkAnswer(24, 'c')"
+        />
+        c) konstruktors </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q24"
+          value="d"
+          onclick="checkAnswer(24, 'd')"
+        />
+        d) destruktors
+      </label>
+      <div id="feedback24" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>25. Kad klases metodes ir pārslogotas (overload) nepareizi?</p>
+      <label>
+        <input
+          type="radio"
+          name="q25"
+          value="a"
+          onclick="checkAnswer(25, 'a')"
+        />
+        a) kad tās atšķiras tikai pēc atgriežamās vērtības tipa </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q25"
+          value="b"
+          onclick="checkAnswer(25, 'b')"
+        />
+        b) kad tās atšķiras tikai pēc parametru tipa </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q25"
+          value="c"
+          onclick="checkAnswer(25, 'c')"
+        />
+        c) kad tās atšķiras tikai pēc parametru skaita </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q25"
+          value="d"
+          onclick="checkAnswer(25, 'd')"
+        />
+        d) ja tās atšķiras pēc parametru tipa un skaita​
+      </label>
+      <div id="feedback25" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        26. Cik reizes izpildīsies šis cikls for (int i = 0; i <= 5; i += 3)?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q26"
+          value="a"
+          onclick="checkAnswer(26, 'a')"
+        />
+        a) 5 reizes </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q26"
+          value="b"
+          onclick="checkAnswer(26, 'b')"
+        />
+        b) nevienu reizi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q26"
+          value="c"
+          onclick="checkAnswer(26, 'c')"
+        />
+        c) 2 reizes </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q26"
+          value="d"
+          onclick="checkAnswer(26, 'd')"
+        />
+        d) 3 reizes
+      </label>
+      <div id="feedback26" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>27. Kura nav salīdzināšanas operācijas zīme programmēšanas valodās?</p>
+      <label>
+        <input
+          type="radio"
+          name="q27"
+          value="a"
+          onclick="checkAnswer(27, 'a')"
+        />
+        a) > </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q27"
+          value="b"
+          onclick="checkAnswer(27, 'b')"
+        />
+        b) < </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q27"
+          value="c"
+          onclick="checkAnswer(27, 'c')"
+        />
+        c) >= </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q27"
+          value="d"
+          onclick="checkAnswer(27, 'd')"
+        />
+        d) ->
+      </label>
+      <div id="feedback27" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        28. Kuru simbolu lieto C++, C#, Delphi vai Java programmas rindas
+        komentāram?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q28"
+          value="a"
+          onclick="checkAnswer(28, 'a')"
+        />
+        a) // </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q28"
+          value="b"
+          onclick="checkAnswer(28, 'b')"
+        />
+        b) # </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q28"
+          value="c"
+          onclick="checkAnswer(28, 'c')"
+        />
+        c) !! </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q28"
+          value="d"
+          onclick="checkAnswer(28, 'd')"
+        />
+        d) <
+      </label>
+      <div id="feedback28" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>29. Ko JAVA/PHP/C#/C++ valodas metodēm dod atslēgvārds "static"?</p>
+      <label>
+        <input
+          type="radio"
+          name="q29"
+          value="a"
+          onclick="checkAnswer(29, 'a')"
+        />
+        a) metodes atgriežamā vērtība klūst nemainīga </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q29"
+          value="b"
+          onclick="checkAnswer(29, 'b')"
+        />
+        b) metodes neveic nekādu darbību </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q29"
+          value="c"
+          onclick="checkAnswer(29, 'c')"
+        />
+        c) metodes pieder klasei un var tikt izsauktas bez klases objekta </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q29"
+          value="d"
+          onclick="checkAnswer(29, 'd')"
+        />
+        d) metodes var izsaukt tikai no klases un tās objektiem
+      </label>
+      <div id="feedback29" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        30. Kura no norādītām izteiksmēm nav C++, C# vai Java programmu
+        operācija?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q30"
+          value="a"
+          onclick="checkAnswer(30, 'a')"
+        />
+        a) a:= 5; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q30"
+          value="b"
+          onclick="checkAnswer(30, 'b')"
+        />
+        b) a += 5; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q30"
+          value="c"
+          onclick="checkAnswer(30, 'c')"
+        />
+        c) a %= 5; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q30"
+          value="d"
+          onclick="checkAnswer(30, 'd')"
+        />
+        d) a *= 5;
+      </label>
+      <div id="feedback30" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        31. Cik reizes izpildīsies cikls dotajā programmas fragmentā (ja c un
+        sum ir veselā tipa mainīgie)?
+      </p>
+      <p>
+        Pascal: sum:= 0; c := 5; WHILE c > 5 do Begin sum := sum + c; c := c +
+        2; end;
+      </p>
+      <p>
+        C++/C#/Java: c = 5; sum = 0; while (c > 5) { sum = sum + c; c = c + 2; }
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q31"
+          value="a"
+          onclick="checkAnswer(31, 'a')"
+        />
+        a) 0 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q31"
+          value="b"
+          onclick="checkAnswer(31, 'b')"
+        />
+        b) 1 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q31"
+          value="c"
+          onclick="checkAnswer(31, 'c')"
+        />
+        c) 2 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q31"
+          value="d"
+          onclick="checkAnswer(31, 'd')"
+        />
+        d) 5
+      </label>
+      <div id="feedback31" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>32. Kas ir mainīgais "age" dotajā programmas fragmentā?</p>
+      <p>C++/Java/C#: void myAge(){int age = 20;}</p>
+      <p>Pascal: procedure myAge; var age: integer; begin age := 20; end;</p>
+      <label>
+        <input
+          type="radio"
+          name="q32"
+          value="a"
+          onclick="checkAnswer(32, 'a')"
+        />
+        a) lokālais mainīgais </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q32"
+          value="b"
+          onclick="checkAnswer(32, 'b')"
+        />
+        b) globālais mainīgais </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q32"
+          value="c"
+          onclick="checkAnswer(32, 'c')"
+        />
+        c) funkcijas/procedūras parametrs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q32"
+          value="d"
+          onclick="checkAnswer(32, 'd')"
+        />
+        d) funkcijas/procedūras ārējais mainīgais
+      </label>
+      <div id="feedback32" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>33. Kurā vietā C++/Java/C# funkcijā (metodē) var aprakstīt mainīgo?</p>
+      <label>
+        <input
+          type="radio"
+          name="q33"
+          value="a"
+          onclick="checkAnswer(33, 'a')"
+        />
+        a) tikai funkcijas sākumā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q33"
+          value="b"
+          onclick="checkAnswer(33, 'b')"
+        />
+        b) uzreiz pēc funkcijas nosaukuma </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q33"
+          value="c"
+          onclick="checkAnswer(33, 'c')"
+        />
+        c) tikai funkcijas beigās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q33"
+          value="d"
+          onclick="checkAnswer(33, 'd')"
+        />
+        d) jebkurā funkcijas vietā pirms mainīgā izmantošanas
+      </label>
+      <div id="feedback33" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        34. Kurš ir pareizs funkcijas (metodes) "vards" apraksts (prototips)
+        C++/Java/C# valodā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q34"
+          value="a"
+          onclick="checkAnswer(34, 'a')"
+        />
+        a) int vards: function; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q34"
+          value="b"
+          onclick="checkAnswer(34, 'b')"
+        />
+        b) function vards : int; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q34"
+          value="c"
+          onclick="checkAnswer(34, 'c')"
+        />
+        c) int vards(); </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q34"
+          value="d"
+          onclick="checkAnswer(34, 'd')"
+        />
+        d) int function vards();
+      </label>
+      <div id="feedback34" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>35. Kā izskatīsies skaitlis 999000 zinātniskā (scientific) formā?</p>
+      <label>
+        <input
+          type="radio"
+          name="q35"
+          value="a"
+          onclick="checkAnswer(35, 'a')"
+        />
+        a) 1,00E+6 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q35"
+          value="b"
+          onclick="checkAnswer(35, 'b')"
+        />
+        b) 9,99E+05 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q35"
+          value="c"
+          onclick="checkAnswer(35, 'c')"
+        />
+        c) 9,99E-05 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q35"
+          value="d"
+          onclick="checkAnswer(35, 'd')"
+        />
+        d) 9,99E^05
+      </label>
+      <div id="feedback35" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        36. Kurš nav C++/Java/C# valodas nosacījuma operators vai operācija?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q36"
+          value="a"
+          onclick="checkAnswer(36, 'a')"
+        />
+        a) ? </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q36"
+          value="b"
+          onclick="checkAnswer(36, 'b')"
+        />
+        b) if </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q36"
+          value="c"
+          onclick="checkAnswer(36, 'c')"
+        />
+        c) switch </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q36"
+          value="d"
+          onclick="checkAnswer(36, 'd')"
+        />
+        d) confirm
+      </label>
+      <div id="feedback36" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>37. Kurš nav C++/Java/C# valodas cikla operators?</p>
+      <label>
+        <input
+          type="radio"
+          name="q37"
+          value="a"
+          onclick="checkAnswer(37, 'a')"
+        />
+        a) if </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q37"
+          value="b"
+          onclick="checkAnswer(37, 'b')"
+        />
+        b) for </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q37"
+          value="c"
+          onclick="checkAnswer(37, 'c')"
+        />
+        c) while </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q37"
+          value="d"
+          onclick="checkAnswer(37, 'd')"
+        />
+        d) do while
+      </label>
+      <div id="feedback37" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        38. Kāda būs x mainīgā vērtība, ja ir dots šāds C++/Java/C# valodas
+        programmas fragments? int a = 4; int b = 3; double x = a/b;
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q38"
+          value="a"
+          onclick="checkAnswer(38, 'a')"
+        />
+        a) būs kompilācijas kļūda </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q38"
+          value="b"
+          onclick="checkAnswer(38, 'b')"
+        />
+        b) 1.333333333 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q38"
+          value="c"
+          onclick="checkAnswer(38, 'c')"
+        />
+        c) 2 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q38"
+          value="d"
+          onclick="checkAnswer(38, 'd')"
+        />
+        d) 1
+      </label>
+      <div id="feedback38" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>39. Kurš nav C++/Java/C# rezervētais vārds?</p>
+      <label>
+        <input
+          type="radio"
+          name="q39"
+          value="a"
+          onclick="checkAnswer(39, 'a')"
+        />
+        a) break </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q39"
+          value="b"
+          onclick="checkAnswer(39, 'b')"
+        />
+        b) insert </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q39"
+          value="c"
+          onclick="checkAnswer(39, 'c')"
+        />
+        c) else </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q39"
+          value="d"
+          onclick="checkAnswer(39, 'd')"
+        />
+        d) continue
+      </label>
+      <div id="feedback39" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        40. Ko dara dotais kods, ja m ir masīvs ar 10 elementiem, bet mainīgie
+        sm un i ir veselie? C++/Java/C#: sm = 0; i = 0; while (i < 10) {sm = sm
+        + m[i]; i++;} Pascal: sm := 0; i := 0; while (i < 10) begin sm := sm +
+        m[i]; inc(i); end;
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q40"
+          value="a"
+          onclick="checkAnswer(40, 'a')"
+        />
+        a) saskaita masīva elementu skaitu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q40"
+          value="b"
+          onclick="checkAnswer(40, 'b')"
+        />
+        b) nosaka i robežas </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q40"
+          value="c"
+          onclick="checkAnswer(40, 'c')"
+        />
+        c) saskaita sm un m </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q40"
+          value="d"
+          onclick="checkAnswer(40, 'd')"
+        />
+        d) sasummē masīva m elementu vērtības
+      </label>
+      <div id="feedback40" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        41. Kā sauc globālā redzamības apgabala sadalījumu, kas nodrošina
+        nosaukumu sadursmes (name collision) neiestāšanos?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q41"
+          value="a"
+          onclick="checkAnswer(41, 'a')"
+        />
+        a) nosaukumu telpa </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q41"
+          value="b"
+          onclick="checkAnswer(41, 'b')"
+        />
+        b) nosaukumu apgabals </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q41"
+          value="c"
+          onclick="checkAnswer(41, 'c')"
+        />
+        c) identifikātoru ierobežojums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q41"
+          value="d"
+          onclick="checkAnswer(41, 'd')"
+        />
+        d) klase
+      </label>
+      <div id="feedback41" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>42. Kur apraksta funkciju /metožu parametrus?</p>
+      <label>
+        <input
+          type="radio"
+          name="q42"
+          value="a"
+          onclick="checkAnswer(42, 'a')"
+        />
+        a) pirms funkcijas / metodes kā globālos mainīgos </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q42"
+          value="b"
+          onclick="checkAnswer(42, 'b')"
+        />
+        b) pie funkcijas / metodes vārda iekavās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q42"
+          value="c"
+          onclick="checkAnswer(42, 'c')"
+        />
+        c) funkcijas / metodes ķermenī, kā lokālos mainīgos </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q42"
+          value="d"
+          onclick="checkAnswer(42, 'd')"
+        />
+        d) jebkurā programmas vietā
+      </label>
+      <div id="feedback42" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        43. Ko nodrošina atslēgas vārda this izmantošana valodās C++/Java/C#?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q43"
+          value="a"
+          onclick="checkAnswer(43, 'a')"
+        />
+        a) piekļuvi klases sākuma adresei </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q43"
+          value="b"
+          onclick="checkAnswer(43, 'b')"
+        />
+        b) klases atribūta izveidošanu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q43"
+          value="c"
+          onclick="checkAnswer(43, 'c')"
+        />
+        c) piekļuvi klases eksemplāram </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q43"
+          value="d"
+          onclick="checkAnswer(43, 'd')"
+        />
+        d) objekta atribūta izveidošanu
+      </label>
+      <div id="feedback43" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        44. Tiek veidota klase MyClass. Kā var izveidot šīs klases konstruktoru
+        C++ / Java / C# valodā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q44"
+          value="a"
+          onclick="checkAnswer(44, 'a')"
+        />
+        a) void MyClass( ){..} / public void MyClass( ){...} </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q44"
+          value="b"
+          onclick="checkAnswer(44, 'b')"
+        />
+        b) MyConstructor( ){…} / public MyConstructor( ) {…} </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q44"
+          value="c"
+          onclick="checkAnswer(44, 'c')"
+        />
+        c) MyClass( ){…} / public MyClass( ){…} </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q44"
+          value="d"
+          onclick="checkAnswer(44, 'd')"
+        />
+        d) constructor MyClass( ){…} / public constructor MyClass( ){…}
+      </label>
+      <div id="feedback44" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>45. Kā izpaužas polimorfisms?</p>
+      <label>
+        <input
+          type="radio"
+          name="q45"
+          value="a"
+          onclick="checkAnswer(45, 'a')"
+        />
+        a) ļauj vienu uzdevumu risināt dažādos veidos </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q45"
+          value="b"
+          onclick="checkAnswer(45, 'b')"
+        />
+        b) apvieno datus un kodu, kas manipulē ar šiem datiem </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q45"
+          value="c"
+          onclick="checkAnswer(45, 'c')"
+        />
+        c) aizsargā datus un metodes no ārējās iejaukšanās vai nepareizās
+        izmantošanas </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q45"
+          value="d"
+          onclick="checkAnswer(45, 'd')"
+        />
+        d) ļauj vienu vārdu izmantot vairāku līdzīgu, bet tehniski atšķirīgu
+        uzdevumu risināšanai
+      </label>
+      <div id="feedback45" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>46. Kas C++ / Java / C# valodās ir "void"?</p>
+      <label>
+        <input
+          type="radio"
+          name="q46"
+          value="a"
+          onclick="checkAnswer(46, 'a')"
+        />
+        a) konstante </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q46"
+          value="b"
+          onclick="checkAnswer(46, 'b')"
+        />
+        b) datu tips </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q46"
+          value="c"
+          onclick="checkAnswer(46, 'c')"
+        />
+        c) tukšums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q46"
+          value="d"
+          onclick="checkAnswer(46, 'd')"
+        />
+        d) operators
+      </label>
+      <div id="feedback46" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>47. Kas ir metode?</p>
+      <label>
+        <input
+          type="radio"
+          name="q47"
+          value="a"
+          onclick="checkAnswer(47, 'a')"
+        />
+        a) Funkcija, kas definēta klasē </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q47"
+          value="b"
+          onclick="checkAnswer(47, 'b')"
+        />
+        b) Funkcija, kas izsauc klasi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q47"
+          value="c"
+          onclick="checkAnswer(47, 'c')"
+        />
+        c) Funkcija, kas izveido klasi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q47"
+          value="d"
+          onclick="checkAnswer(47, 'd')"
+        />
+        d) Funkcija, kas izveido objektu
+      </label>
+      <div id="feedback47" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>48. Kas ir klases atribūts (lauks)?</p>
+      <label>
+        <input
+          type="radio"
+          name="q48"
+          value="a"
+          onclick="checkAnswer(48, 'a')"
+        />
+        a) Klases instance </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q48"
+          value="b"
+          onclick="checkAnswer(48, 'b')"
+        />
+        b) Mainīgais, kas apraksta klases datus </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q48"
+          value="c"
+          onclick="checkAnswer(48, 'c')"
+        />
+        c) Metodes arguments </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q48"
+          value="d"
+          onclick="checkAnswer(48, 'd')"
+        />
+        d) Lokālais metodes mainīgais
+      </label>
+      <div id="feedback48" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        49. Kādam ir jābūt funkcijas atgriežamās vērtības tipam valodās
+        C++/Java/C#, lai varētu neizmantot operatoru "return"?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q49"
+          value="a"
+          onclick="checkAnswer(49, 'a')"
+        />
+        a) int </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q49"
+          value="b"
+          onclick="checkAnswer(49, 'b')"
+        />
+        b) void </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q49"
+          value="c"
+          onclick="checkAnswer(49, 'c')"
+        />
+        c) double </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q49"
+          value="d"
+          onclick="checkAnswer(49, 'd')"
+        />
+        d) bool
+      </label>
+      <div id="feedback49" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        50. Kurš C++ / Java / C# valodas operators izsauc objekta mansObjekts
+        metodi manaMetode bez argumentiem?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q50"
+          value="a"
+          onclick="checkAnswer(50, 'a')"
+        />
+        a) manaMetode.mansObjekts; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q50"
+          value="b"
+          onclick="checkAnswer(50, 'b')"
+        />
+        b) mansObjekts.manaMetode; </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q50"
+          value="c"
+          onclick="checkAnswer(50, 'c')"
+        />
+        c) mansObjekts.manaMetode(); </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q50"
+          value="d"
+          onclick="checkAnswer(50, 'd')"
+        />
+        d) manaMetode().mansObjekts;
+      </label>
+      <div id="feedback50" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        51. Kā pareizi deklarēt metodi ar nosaukumu "manaMetode" C++ / Java / C#
+        valodā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q51"
+          value="a"
+          onclick="checkAnswer(51, 'a')"
+        />
+        a) void() manaMetode </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q51"
+          value="b"
+          onclick="checkAnswer(51, 'b')"
+        />
+        b) void manaMetode </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q51"
+          value="c"
+          onclick="checkAnswer(51, 'c')"
+        />
+        c) void manaMetode( ) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q51"
+          value="d"
+          onclick="checkAnswer(51, 'd')"
+        />
+        d) void manaMetode[ ]
+      </label>
+      <div id="feedback51" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        52. Kurš atslēgvārdu pāris ļauj apstrādāt izņēmumus (exceptions) C++ /
+        Java / C# valodā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q52"
+          value="a"
+          onclick="checkAnswer(52, 'a')"
+        />
+        a) do while </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q52"
+          value="b"
+          onclick="checkAnswer(52, 'b')"
+        />
+        b) for do </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q52"
+          value="c"
+          onclick="checkAnswer(52, 'c')"
+        />
+        c) try do </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q52"
+          value="d"
+          onclick="checkAnswer(52, 'd')"
+        />
+        d) try catch
+      </label>
+      <div id="feedback52" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        53. Kurš atslēgas vārds valodās C++/Java/C# nodrošina to, ka metodi var
+        izmantot neizveidojot klases objektu?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q53"
+          value="a"
+          onclick="checkAnswer(53, 'a')"
+        />
+        a) public </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q53"
+          value="b"
+          onclick="checkAnswer(53, 'b')"
+        />
+        b) protected </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q53"
+          value="c"
+          onclick="checkAnswer(53, 'c')"
+        />
+        c) private </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q53"
+          value="d"
+          onclick="checkAnswer(53, 'd')"
+        />
+        d) static
+      </label>
+      <div id="feedback53" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        54. Kurš atslēgas vārds pirms lokālā funkcijas mainīgā, nodrošina to, ka
+        tas tiek inicializēts tikai vienu reizi un saglabā savu vērtību katrā
+        funkcijas izsaukumā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q54"
+          value="a"
+          onclick="checkAnswer(54, 'a')"
+        />
+        a) public </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q54"
+          value="b"
+          onclick="checkAnswer(54, 'b')"
+        />
+        b) protected </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q54"
+          value="c"
+          onclick="checkAnswer(54, 'c')"
+        />
+        c) private </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q54"
+          value="d"
+          onclick="checkAnswer(54, 'd')"
+        />
+        d) static
+      </label>
+      <div id="feedback54" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        55. Kas ir jāizmanto, ja projektējot OOP programmu vēlas, lai visām
+        atvasinātajām klasēm visos mantojuma līmeņos būtu kāda kopīga
+        realizācija?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q55"
+          value="a"
+          onclick="checkAnswer(55, 'a')"
+        />
+        a) abstraktā klase </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q55"
+          value="b"
+          onclick="checkAnswer(55, 'b')"
+        />
+        b) inkapsulācija </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q55"
+          value="c"
+          onclick="checkAnswer(55, 'c')"
+        />
+        c) dinamiskā klase </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q55"
+          value="d"
+          onclick="checkAnswer(55, 'd')"
+        />
+        d) statiskā klase
+      </label>
+      <div id="feedback55" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        56. Kas ir komandu virkne, kurai ir nosaukums, parametru saraksts un ko
+        var izsaukt no dažādām programmas daļām?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q56"
+          value="a"
+          onclick="checkAnswer(56, 'a')"
+        />
+        a) bloks </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q56"
+          value="b"
+          onclick="checkAnswer(56, 'b')"
+        />
+        b) funkcija </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q56"
+          value="c"
+          onclick="checkAnswer(56, 'c')"
+        />
+        c) cikls </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q56"
+          value="d"
+          onclick="checkAnswer(56, 'd')"
+        />
+        d) sazarojums
+      </label>
+      <div id="feedback56" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        57. Dots programmas fragments C++ / C# /Java: int day = 4; string name;
+        (Java: String name;) switch (day) { case 1: name = "Monday"; break; case
+        2: name = "Thuesday"; break; ... _____: name = "Invalid"; } Kas
+        jāieraksta _______ vietā, lai pabeigtu switch operatoru un norādītu,
+        kuru operatoru pildīt, ja nav neviena izvēles varianta?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q57"
+          value="a"
+          onclick="checkAnswer(57, 'a')"
+        />
+        a) default </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q57"
+          value="b"
+          onclick="checkAnswer(57, 'b')"
+        />
+        b) break </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q57"
+          value="c"
+          onclick="checkAnswer(57, 'c')"
+        />
+        c) end </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q57"
+          value="d"
+          onclick="checkAnswer(57, 'd')"
+        />
+        d) goto
+      </label>
+      <div id="feedback57" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        58. Dots programmas fragments C++/Java/C#: int x = 0; try { float y = 1
+        / x; } _____ ... Kas jāieraksta _____ vietā, lai apstrādātu kļūdu
+        programmā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q58"
+          value="a"
+          onclick="checkAnswer(58, 'a')"
+        />
+        a) exception </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q58"
+          value="b"
+          onclick="checkAnswer(58, 'b')"
+        />
+        b) handle </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q58"
+          value="c"
+          onclick="checkAnswer(58, 'c')"
+        />
+        c) catch </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q58"
+          value="d"
+          onclick="checkAnswer(58, 'd')"
+        />
+        d) finally
+      </label>
+      <div id="feedback58" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        59. Kā sauc programmas vizuālos komponentus, ar kuriem mijiedarbojas
+        lietotājs?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q59"
+          value="a"
+          onclick="checkAnswer(59, 'a')"
+        />
+        a) OOP </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q59"
+          value="b"
+          onclick="checkAnswer(59, 'b')"
+        />
+        b) Unity </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q59"
+          value="c"
+          onclick="checkAnswer(59, 'c')"
+        />
+        c) Google </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q59"
+          value="d"
+          onclick="checkAnswer(59, 'd')"
+        />
+        d) GUI
+      </label>
+      <div id="feedback59" class="feedback"></div>
+    </div>
+
+    <h1>Datu struktūras un algoritmi</h1>
+
+    <div class="question">
+      <p>60. Pēc kādiem kritērijiem neklasificē datu struktūras?</p>
+      <label>
+        <input
+          type="radio"
+          name="q60"
+          value="a"
+          onclick="checkAnswer(60, 'a')"
+        />
+        a) pēc datu savienojamības struktūrā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q60"
+          value="b"
+          onclick="checkAnswer(60, 'b')"
+        />
+        b) pēc struktūras mainīguma laikā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q60"
+          value="c"
+          onclick="checkAnswer(60, 'c')"
+        />
+        c) pēc elementu skaita struktūrā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q60"
+          value="d"
+          onclick="checkAnswer(60, 'd')"
+        />
+        d) pēc struktūras sakārtotības
+      </label>
+      <div id="feedback60" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        61. Ko glabā kopā ar elementu, ja tiek izmantots pusstatisko struktūru
+        saistītais glabāšanas veids?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q61"
+          value="a"
+          onclick="checkAnswer(61, 'a')"
+        />
+        a) elementa kārtas numurs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q61"
+          value="b"
+          onclick="checkAnswer(61, 'b')"
+        />
+        b) norāde uz nākošo elementu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q61"
+          value="c"
+          onclick="checkAnswer(61, 'c')"
+        />
+        c) elementa izmērs baitos </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q61"
+          value="d"
+          onclick="checkAnswer(61, 'd')"
+        />
+        d) norāde uz struktūras sākumu
+      </label>
+      <div id="feedback61" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        62. No kuras vietas var dzēst elementus stekā? (Parjautat vai virsotne)
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q62"
+          value="a"
+          onclick="checkAnswer(62, 'a')"
+        />
+        a) no steka virsotnes </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q62"
+          value="b"
+          onclick="checkAnswer(62, 'b')"
+        />
+        b) no steka galvas</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q62"
+          value="c"
+          onclick="checkAnswer(62, 'c')"
+        />
+        c) no steka beigām </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q62"
+          value="d"
+          onclick="checkAnswer(62, 'd')"
+        />
+        d) no jebkuras steka vietas
+      </label>
+      <div id="feedback62" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        63. Kā sauc datu struktūru, kurā elementu ievietošana notiek no viena
+        gala, bet izslēgšana no otra?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q63"
+          value="a"
+          onclick="checkAnswer(63, 'a')"
+        />
+        a) steks </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q63"
+          value="b"
+          onclick="checkAnswer(63, 'b')"
+        />
+        b) deks</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q63"
+          value="c"
+          onclick="checkAnswer(63, 'c')"
+        />
+        c) rinda</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q63"
+          value="d"
+          onclick="checkAnswer(63, 'd')"
+        />
+        d) tabula
+      </label>
+      <div id="feedback63" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>64. Kādas var būt virsotņu pakāpes vērtības binārajā kokā?</p>
+      <label>
+        <input
+          type="radio"
+          name="q64"
+          value="a"
+          onclick="checkAnswer(64, 'a')"
+        />
+        a) tikai 2 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q64"
+          value="b"
+          onclick="checkAnswer(64, 'b')"
+        />
+        b) vairāk par 2</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q64"
+          value="c"
+          onclick="checkAnswer(64, 'c')"
+        />
+        c) 0, 1, 2</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q64"
+          value="d"
+          onclick="checkAnswer(64, 'd')"
+        />
+        d) 0, 1
+      </label>
+      <div id="feedback64" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        65. Kādā meklēšanas metodē meklējamais elements katrā iterācijā tiek
+        salīdzināts ar vidējo apgabala elementu un meklējamais apgabals tiek
+        samazināts uz pusi?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q65"
+          value="a"
+          onclick="checkAnswer(65, 'a')"
+        />
+        a) turnīrameklēšanā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q65"
+          value="b"
+          onclick="checkAnswer(65, 'b')"
+        />
+        b) stohastiskajā meklēšanā</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q65"
+          value="c"
+          onclick="checkAnswer(65, 'c')"
+        />
+        c) blokveidameklēšanā</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q65"
+          value="d"
+          onclick="checkAnswer(65, 'd')"
+        />
+        d) binārajā meklēšanā
+      </label>
+      <div id="feedback65" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>66. Kas neraksturo šķirošanas metodes efektivitāti?</p>
+      <label>
+        <input
+          type="radio"
+          name="q66"
+          value="a"
+          onclick="checkAnswer(66, 'a')"
+        />
+        a) sagaidāmais salīdzinājumu skaits </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q66"
+          value="b"
+          onclick="checkAnswer(66, 'b')"
+        />
+        b) sagaidāmais pārvietojumu skaits</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q66"
+          value="c"
+          onclick="checkAnswer(66, 'c')"
+        />
+        c) papildus nepieciešamais atmiņas apjoms</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q66"
+          value="d"
+          onclick="checkAnswer(66, 'd')"
+        />
+        d) datu elementu skaits
+      </label>
+      <div id="feedback66" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>67. Cik daudz dimensiju var būt masīvam?</p>
+      <label>
+        <input
+          type="radio"
+          name="q67"
+          value="a"
+          onclick="checkAnswer(67, 'a')"
+        />
+        a) viena </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q67"
+          value="b"
+          onclick="checkAnswer(67, 'b')"
+        />
+        b) divas</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q67"
+          value="c"
+          onclick="checkAnswer(67, 'c')"
+        />
+        c) trīs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q67"
+          value="d"
+          onclick="checkAnswer(67, 'd')"
+        />
+        d) neierobežots daudzums
+      </label>
+      <div id="feedback67" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>68. Kāda datu struktūra ir paredzēta vienāda tipa datu glabāšanai?</p>
+      <label>
+        <input
+          type="radio"
+          name="q68"
+          value="a"
+          onclick="checkAnswer(68, 'a')"
+        />
+        a) klase </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q68"
+          value="b"
+          onclick="checkAnswer(68, 'b')"
+        />
+        b) struktūra</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q68"
+          value="c"
+          onclick="checkAnswer(68, 'c')"
+        />
+        c) masīvs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q68"
+          value="d"
+          onclick="checkAnswer(68, 'd')"
+        />
+        d) ieraksts
+      </label>
+      <div id="feedback68" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>69. Kāds ir rindas elementa ievietošanas/izslēgšanas princips?</p>
+      <label>
+        <input
+          type="radio"
+          name="q69"
+          value="a"
+          onclick="checkAnswer(69, 'a')"
+        />
+        a) pirmais iekšā, pēdējais ārā (FILO) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q69"
+          value="b"
+          onclick="checkAnswer(69, 'b')"
+        />
+        b) pēdējais iekšā, pirmais ārā (LIFO)</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q69"
+          value="c"
+          onclick="checkAnswer(69, 'c')"
+        />
+        c) pēdējais iekšā, pēdējais ārā (LILO) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q69"
+          value="d"
+          onclick="checkAnswer(69, 'd')"
+        />
+        d) pirmais iekšā, pirmais ārā (FIFO)
+      </label>
+      <div id="feedback69" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>70. Kas ir "ieraksts"?</p>
+      <label>
+        <input
+          type="radio"
+          name="q70"
+          value="a"
+          onclick="checkAnswer(70, 'a')"
+        />
+        a) tikai vienāda tipa elementu kopums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q70"
+          value="b"
+          onclick="checkAnswer(70, 'b')"
+        />
+        b) sakārtots vienāda tipa elementu kopums</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q70"
+          value="c"
+          onclick="checkAnswer(70, 'c')"
+        />
+        c) tikai simbolu virkņu elementu kopums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q70"
+          value="d"
+          onclick="checkAnswer(70, 'd')"
+        />
+        d) datu tips, kurš ietver dažādu tipu datu laukus
+      </label>
+      <div id="feedback70" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>71. Kura datu struktūra apraksta datus un metodes?</p>
+      <label>
+        <input
+          type="radio"
+          name="q71"
+          value="a"
+          onclick="checkAnswer(71, 'a')"
+        />
+        a) modulis </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q71"
+          value="b"
+          onclick="checkAnswer(71, 'b')"
+        />
+        b) ieraksts</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q71"
+          value="c"
+          onclick="checkAnswer(71, 'c')"
+        />
+        c) klase </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q71"
+          value="d"
+          onclick="checkAnswer(71, 'd')"
+        />
+        d) funkcija
+      </label>
+      <div id="feedback71" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>72. Kur var pievienot deka (deque) jaunu elementu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q72"
+          value="a"
+          onclick="checkAnswer(72, 'a')"
+        />
+        a) sākumā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q72"
+          value="b"
+          onclick="checkAnswer(72, 'b')"
+        />
+        b) beigās</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q72"
+          value="c"
+          onclick="checkAnswer(72, 'c')"
+        />
+        c) abos galos </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q72"
+          value="d"
+          onclick="checkAnswer(72, 'd')"
+        />
+        d) jebkurā vietā
+      </label>
+      <div id="feedback72" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>73. Kurš ir pareizs apgalvojums par bināro koku?</p>
+      <label>
+        <input
+          type="radio"
+          name="q73"
+          value="a"
+          onclick="checkAnswer(73, 'a')"
+        />
+        a) katram mezglam ir ne vairāk kā divi priekšteči </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q73"
+          value="b"
+          onclick="checkAnswer(73, 'b')"
+        />
+        b) katram mezglam ir ne vairāk kā divi pēcteči</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q73"
+          value="c"
+          onclick="checkAnswer(73, 'c')"
+        />
+        c) katram mezglam ir ne vairāk kā divi bērni </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q73"
+          value="d"
+          onclick="checkAnswer(73, 'd')"
+        />
+        d) katram mezglam ir ne vairāk kā divi vecāki
+      </label>
+      <div id="feedback73" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>74. Kā sauc koka pirmo mezglu (kas ir koka pašā augšā)?</p>
+      <label>
+        <input
+          type="radio"
+          name="q74"
+          value="a"
+          onclick="checkAnswer(74, 'a')"
+        />
+        a) sākums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q74"
+          value="b"
+          onclick="checkAnswer(74, 'b')"
+        />
+        b) galva</label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q74"
+          value="c"
+          onclick="checkAnswer(74, 'c')"
+        />
+        c) virsotne </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q74"
+          value="d"
+          onclick="checkAnswer(74, 'd')"
+        />
+        d) sakne
+      </label>
+      <div id="feedback74" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>75. Kā sauc koka mezglu, kuram nav bērnu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q75"
+          value="a"
+          onclick="checkAnswer(75, 'a')"
+        />
+        a) bārenis </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q75"
+          value="b"
+          onclick="checkAnswer(75, 'b')"
+        />
+        b) lapa </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q75"
+          value="c"
+          onclick="checkAnswer(75, 'c')"
+        />
+        c) iekšējais mezgls </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q75"
+          value="d"
+          onclick="checkAnswer(75, 'd')"
+        />
+        d) sakne
+      </label>
+      <div id="feedback75" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>76. Kā sauc garumu garākajam ceļam no koka mezgla līdz kādai lapai?</p>
+      <label>
+        <input
+          type="radio"
+          name="q76"
+          value="a"
+          onclick="checkAnswer(76, 'a')"
+        />
+        a) augstums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q76"
+          value="b"
+          onclick="checkAnswer(76, 'b')"
+        />
+        b) dziļums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q76"
+          value="c"
+          onclick="checkAnswer(76, 'c')"
+        />
+        c) garums </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q76"
+          value="d"
+          onclick="checkAnswer(76, 'd')"
+        />
+        d) platums
+      </label>
+      <div id="feedback76" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        77. Kā sauc datu struktūru, kurā katram mezglam var būt vairāki bērni
+        bet tikai viens vecāks?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q77"
+          value="a"
+          onclick="checkAnswer(77, 'a')"
+        />
+        a) saraksts </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q77"
+          value="b"
+          onclick="checkAnswer(77, 'b')"
+        />
+        b) divkāršsaistīts saraksts </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q77"
+          value="c"
+          onclick="checkAnswer(77, 'c')"
+        />
+        c) koks </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q77"
+          value="d"
+          onclick="checkAnswer(77, 'd')"
+        />
+        d) grafs
+      </label>
+      <div id="feedback77" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>78. Kas nav koka apstaigāšanas veids?</p>
+      <label>
+        <input
+          type="radio"
+          name="q78"
+          value="a"
+          onclick="checkAnswer(78, 'a')"
+        />
+        a) pirmssakārtojums (preorder) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q78"
+          value="b"
+          onclick="checkAnswer(78, 'b')"
+        />
+        b) ārējais sakārtojums (outorder) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q78"
+          value="c"
+          onclick="checkAnswer(78, 'c')"
+        />
+        c) iekšējs sakārtojums (inorder) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q78"
+          value="d"
+          onclick="checkAnswer(78, 'd')"
+        />
+        d) pēcsakārtojums (postorder)
+      </label>
+      <div id="feedback78" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        79. Kurš ir pareizs apgalvojums par binārās meklēšanas koku (binary
+        search tree)?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q79"
+          value="a"
+          onclick="checkAnswer(79, 'a')"
+        />
+        a) kreisā bērna atslēga ir mazāka par paša mezgla atslēgu, bet labā–
+        lielākā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q79"
+          value="b"
+          onclick="checkAnswer(79, 'b')"
+        />
+        b) kreisā bērna atslēga ir lielāka par paša mezgla atslēgu, bet labā–
+        mazākā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q79"
+          value="c"
+          onclick="checkAnswer(79, 'c')"
+        />
+        c) mezglu atslēgas vērtības var atkārtoties </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q79"
+          value="d"
+          onclick="checkAnswer(79, 'd')"
+        />
+        d) koku lieto, lai pierakstītu aritmētiskās izteiksmes
+      </label>
+      <div id="feedback79" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>80. Kas neraksturo kārtošanas (sorting) metodes efektivitāti?</p>
+      <label>
+        <input
+          type="radio"
+          name="q80"
+          value="a"
+          onclick="checkAnswer(80, 'a')"
+        />
+        a) sagaidāmais salīdzinājumu skaits </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q80"
+          value="b"
+          onclick="checkAnswer(80, 'b')"
+        />
+        b) sagaidāmais pārvietojumu skaits </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q80"
+          value="c"
+          onclick="checkAnswer(80, 'c')"
+        />
+        c) papildus nepieciešamais atmiņas apjoms </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q80"
+          value="d"
+          onclick="checkAnswer(80, 'd')"
+        />
+        d) komandrindu skaits
+      </label>
+      <div id="feedback80" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>81. Kura kārtošanas metode tiek uzskatīta par visneeffektīvāko?</p>
+      <label>
+        <input
+          type="radio"
+          name="q81"
+          value="a"
+          onclick="checkAnswer(81, 'a')"
+        />
+        a) Bubble sort (burbuļa metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q81"
+          value="b"
+          onclick="checkAnswer(81, 'b')"
+        />
+        b) Shell sort (Šella metode, restītes metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q81"
+          value="c"
+          onclick="checkAnswer(81, 'c')"
+        />
+        c) Insertion sort (ievietošanas metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q81"
+          value="d"
+          onclick="checkAnswer(81, 'd')"
+        />
+        d) Merge sort (saplūdumu metode)
+      </label>
+      <div id="feedback81" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        82. Kurā masīva kārtošanas metodē katram k. elementam vieta tiek meklēta
+        iepriekš sakārtotajā virknē no k - 1 elementa?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q82"
+          value="a"
+          onclick="checkAnswer(82, 'a')"
+        />
+        a) Bubble sort (burbuļa metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q82"
+          value="b"
+          onclick="checkAnswer(82, 'b')"
+        />
+        b) Shell sort (Šella metode, restītes metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q82"
+          value="c"
+          onclick="checkAnswer(82, 'c')"
+        />
+        c) Insertion sort (ievietošanas metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q82"
+          value="d"
+          onclick="checkAnswer(82, 'd')"
+        />
+        d) Merge sort (saplūdumu metode)
+      </label>
+      <div id="feedback82" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        83. Kādā secībā notiek koka apstaigāšana ar iekšējā sakārtojuma
+        (inorder) algoritmu?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q83"
+          value="a"
+          onclick="checkAnswer(83, 'a')"
+        />
+        a) no sākuma tiek aplūkots kreisais apakškoks, pēc tam pati virsotne un
+        pēdējais tiek aplūkots labais apakškoks </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q83"
+          value="b"
+          onclick="checkAnswer(83, 'b')"
+        />
+        b) no sākuma tiek aplūkota virsotne, pēc tam kreisais apakškoks, pēc tam
+        labais apakškoks </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q83"
+          value="c"
+          onclick="checkAnswer(83, 'c')"
+        />
+        c) no sākuma tiek aplūkots kreisais apakškoks, pēc tam labais apakškoks,
+        pēc tam virsotne </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q83"
+          value="d"
+          onclick="checkAnswer(83, 'd')"
+        />
+        d) no sākuma tiek aplūkota virsotne, tad apakškoki, tad atkal virsotne
+      </label>
+      <div id="feedback83" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        84. Uz steka virsotni rāda norāde top. Kādas vērtības paliks stekā pēc
+        elementu izņemšanas pop() operācijas, ja sākumā stekā bija šādi
+        elementi: top-> 2 -> 44 -> 4 -> 8 ?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q84"
+          value="a"
+          onclick="checkAnswer(84, 'a')"
+        />
+        a) top -> 2 -> 4 -> 44 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q84"
+          value="b"
+          onclick="checkAnswer(84, 'b')"
+        />
+        b) top -> 44 -> 4 -> 8 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q84"
+          value="c"
+          onclick="checkAnswer(84, 'c')"
+        />
+        c) top -> 2 -> 44 -> 4 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q84"
+          value="d"
+          onclick="checkAnswer(84, 'd')"
+        />
+        d) top -> 4 -> 8 -> 44
+      </label>
+      <div id="feedback84" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        85. Uz steka virsotni rāda norāde top. Kā izskatīsies steks pēc
+        operācijas push(8), ja sākumā stekā bija šādi elementi: top-> 2 4 7 8 10
+        ?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q85"
+          value="a"
+          onclick="checkAnswer(85, 'a')"
+        />
+        a) top -> 2 4 7 8 10 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q85"
+          value="b"
+          onclick="checkAnswer(85, 'b')"
+        />
+        b) top -> 2 4 7 8 8 10 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q85"
+          value="c"
+          onclick="checkAnswer(85, 'c')"
+        />
+        c) top -> 2 4 7 8 10 8 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q85"
+          value="d"
+          onclick="checkAnswer(85, 'd')"
+        />
+        d) top -> 8 2 4 7 8 10
+      </label>
+      <div id="feedback85" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>86. Norādiet nepareizo apgalvojumu par koku!</p>
+      <label>
+        <input
+          type="radio"
+          name="q86"
+          value="a"
+          onclick="checkAnswer(86, 'a')"
+        />
+        a) koks ir kompozīcija no mezgliem (node) un šķautnēm (edge) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q86"
+          value="b"
+          onclick="checkAnswer(86, 'b')"
+        />
+        b) koks ir datu struktūra </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q86"
+          value="c"
+          onclick="checkAnswer(86, 'c')"
+        />
+        c) mezgli glabā informāciju </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q86"
+          value="d"
+          onclick="checkAnswer(86, 'd')"
+        />
+        d) koka mezglus var apstaigāt ar ciklu palīdzību
+      </label>
+      <div id="feedback86" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        87. Uz rindas sākumu rāda norāde head. Kā izskatīsies rinda pēc elementu
+        pievienošanas operācijas enQueue(8), ja sākumā rindā bija šādi elementi:
+        head-> 2 4 7 8 10 ?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q87"
+          value="a"
+          onclick="checkAnswer(87, 'a')"
+        />
+        a) head -> 2 4 7 8 10 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q87"
+          value="b"
+          onclick="checkAnswer(87, 'b')"
+        />
+        b) head -> 2 4 7 8 8 10 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q87"
+          value="c"
+          onclick="checkAnswer(87, 'c')"
+        />
+        c) head -> 2 4 7 8 10 8 </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q87"
+          value="d"
+          onclick="checkAnswer(87, 'd')"
+        />
+        d) head -> 8 2 4 7 8 10
+      </label>
+      <div id="feedback87" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>88. Kura elementu kārtošanas metode tiek realizēta rekursīvi?</p>
+      <label>
+        <input
+          type="radio"
+          name="q88"
+          value="a"
+          onclick="checkAnswer(88, 'a')"
+        />
+        a) Bubble Sort (burbuļa metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q88"
+          value="b"
+          onclick="checkAnswer(88, 'b')"
+        />
+        b) Shell Sort (Šella metode, restītes metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q88"
+          value="c"
+          onclick="checkAnswer(88, 'c')"
+        />
+        c) Insertion Sort (ievietošanas metode) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q88"
+          value="d"
+          onclick="checkAnswer(88, 'd')"
+        />
+        d) Quick Sort (ātrās kārtošanas metode)
+      </label>
+      <div id="feedback88" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        89. Kurš ir nepareizs apgalvojums par ātrās kārtošanas (Quick Sort)
+        algoritmu?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q89"
+          value="a"
+          onclick="checkAnswer(89, 'a')"
+        />
+        a) algoritmu realizē rekursīvi </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q89"
+          value="b"
+          onclick="checkAnswer(89, 'b')"
+        />
+        b) divi apakšmasīvi "saplūd" trešajā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q89"
+          value="c"
+          onclick="checkAnswer(89, 'c')"
+        />
+        c) no masīva atlasa bāzes (pivot) elementu </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q89"
+          value="d"
+          onclick="checkAnswer(89, 'd')"
+        />
+        d) masīva elementus apstaigā no abām pusēm
+      </label>
+      <div id="feedback89" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>90. Kurš ir nepareizs apgalvojums par dinamiskajām datu struktūrām?</p>
+      <label>
+        <input
+          type="radio"
+          name="q90"
+          value="a"
+          onclick="checkAnswer(90, 'a')"
+        />
+        a) tās atrodas dinamiskajā atmiņā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q90"
+          value="b"
+          onclick="checkAnswer(90, 'b')"
+        />
+        b) tās ir nelineāras struktūras </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q90"
+          value="c"
+          onclick="checkAnswer(90, 'c')"
+        />
+        c) to izmērs var mainīties programmas izpildes laikā </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q90"
+          value="d"
+          onclick="checkAnswer(90, 'd')"
+        />
+        d) atmiņa tiem tiek piešķirta programmas izpildes laikā
+      </label>
+      <div id="feedback90" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>91. Kurš ir nepareizs apgalvojums par divkāršsaistītiem sarakstiem?</p>
+      <label>
+        <input
+          type="radio"
+          name="q91"
+          value="a"
+          onclick="checkAnswer(91, 'a')"
+        />
+        a) katrs elements ir saistīts ar iepriekšējo - ja šādas saites nav, tad
+        tas ir sākuma elements </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q91"
+          value="b"
+          onclick="checkAnswer(91, 'b')"
+        />
+        b) katrs elements ir saistīts ar nākamo - ja šādas saites nav, tad tas
+        ir pēdējais elements </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q91"
+          value="c"
+          onclick="checkAnswer(91, 'c')"
+        />
+        c) elementus var ievietot un dzēst tikai saraksta sākumā un beigās </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q91"
+          value="d"
+          onclick="checkAnswer(91, 'd')"
+        />
+        d) var iegūt dotā elementa nākamo / iepriekšējo vai pārliecināties, ka
+        tas ir robeželements
+      </label>
+      <div id="feedback91" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>92. Kurš ir nepareizs apgalvojums par algoritmu?</p>
+      <label>
+        <input
+          type="radio"
+          name="q92"
+          value="a"
+          onclick="checkAnswer(92, 'a')"
+        />
+        a) var būt bezgalīgs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q92"
+          value="b"
+          onclick="checkAnswer(92, 'b')"
+        />
+        b) var būt rekursīvs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q92"
+          value="c"
+          onclick="checkAnswer(92, 'c')"
+        />
+        c) var saturēt ciklus </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q92"
+          value="d"
+          onclick="checkAnswer(92, 'd')"
+        />
+        d) var saturēt sazarojumus
+      </label>
+      <div id="feedback92" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        93. Kas ir galīgo soļu virkne, kas precizē, kā sasniegt kādu rezultātu?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q93"
+          value="a"
+          onclick="checkAnswer(93, 'a')"
+        />
+        a) algoritms </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q93"
+          value="b"
+          onclick="checkAnswer(93, 'b')"
+        />
+        b) masīvs </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q93"
+          value="c"
+          onclick="checkAnswer(93, 'c')"
+        />
+        c) ceļvedis </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q93"
+          value="d"
+          onclick="checkAnswer(93, 'd')"
+        />
+        d) diagramma
+      </label>
+      <div id="feedback93" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        94. Kurš no masīva kārtošanas algoritmiem prasa kopēt masīvu
+        starpmasīvā?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q94"
+          value="a"
+          onclick="checkAnswer(94, 'a')"
+        />
+        a) burbuļa metode (Bubble Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q94"
+          value="b"
+          onclick="checkAnswer(94, 'b')"
+        />
+        b) ātrās kārtošanas metode (Quick Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q94"
+          value="c"
+          onclick="checkAnswer(94, 'c')"
+        />
+        c) ievietošanas metode (Insertion Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q94"
+          value="d"
+          onclick="checkAnswer(94, 'd')"
+        />
+        d) saplūdumu metode (Merge Sort)
+      </label>
+      <div id="feedback94" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>
+        95. Kurā kārtošanas metodē funkcija saņem divus sakārtotus masīvus un
+        atgriež to sakārtoto apvienojumu?
+      </p>
+      <label>
+        <input
+          type="radio"
+          name="q95"
+          value="a"
+          onclick="checkAnswer(95, 'a')"
+        />
+        a) burbuļa metode (Bubble Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q95"
+          value="b"
+          onclick="checkAnswer(95, 'b')"
+        />
+        b) ātrās kārtošanas metode (Quick Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q95"
+          value="c"
+          onclick="checkAnswer(95, 'c')"
+        />
+        c) ievietošanas metode (Insertion Sort) </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q95"
+          value="d"
+          onclick="checkAnswer(95, 'd')"
+        />
+        d) saplūdumu metode (Merge Sort)
+      </label>
+      <div id="feedback95" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>96. Kurš ir nepareizs apgalvojums par datu struktūru "koks"?</p>
+      <label>
+        <input
+          type="radio"
+          name="q96"
+          value="a"
+          onclick="checkAnswer(96, 'a')"
+        />
+        a) tā ir dinamiskā datu struktūra </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q96"
+          value="b"
+          onclick="checkAnswer(96, 'b')"
+        />
+        b) tā ir binārā datu struktūra </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q96"
+          value="c"
+          onclick="checkAnswer(96, 'c')"
+        />
+        c) tā ir nelineārā datu struktūra </label
+      ><br />
+      <label>
+        <input
+          type="radio"
+          name="q96"
+          value="d"
+          onclick="checkAnswer(96, 'd')"
+        />
+        d) tā ir saistītā datu struktūra
+      </label>
+      <div id="feedback96" class="feedback"></div>
+    </div>
+
+    <button id="reset-btn" onclick="resetQuiz()">Reset Quiz</button>
+
+    <script>
+      const correctAnswers = {
+        1: "b", // b is correct for question 1
+        2: "b", // b is correct for question 2
+        3: "a", // a is correct for question 3
+        4: "c", // c is correct for question 4
+        5: "a", // a is correct for question 5
+        6: "c", // c is correct for question 6
+        7: "c", // c is correct for question 7
+        8: "c", // c is correct for question 8
+        9: "b", // b is correct for question 9
+        10: "a", // a is correct for question 10
+        11: "b", // b is correct for question 11
+        12: "a", // a is correct for question 12
+        13: "a", // a is correct for question 13
+        14: "d", // d is correct for question 14
+        15: "a", // a is correct for question 15
+        16: "c", // c is correct for question 16
+        17: "c", // c is correct for question 17
+        18: "b", // b is correct for question 18
+        19: "b", // b is correct for question 19
+        20: "a", // a is correct for question 20
+        21: "b", // b is correct for question 21
+        22: "b", // b is correct for question 22
+        23: "a", // a is correct for question 23
+        24: "c", // c is correct for question 24
+        25: "a", // a is correct for question 25
+        26: "c", // c is correct for question 26
+        27: "d", // d is correct for question 27
+        28: "a", // a is correct for question 28
+        29: "c", // c is correct for question 29
+        30: "a", // a is correct for question 30
+        31: "a", // a is correct for question 31
+        32: "c", // c is correct for question 32
+        33: "d", // d is correct for question 33
+        34: "c", // c is correct for question 34
+        35: "b", // b is correct for question 35
+        36: "d", // d is correct for question 36
+        37: "a", // a is correct for question 37
+        38: "d", // d is correct for question 38
+        39: "b", // b is correct for question 39
+        40: "d", // d is correct for question 40
+        41: "a", // a is correct for question 41
+        42: "b", // b is correct for question 42
+        43: "c", // c is correct for question 43
+        44: "c", // c is correct for question 44
+        45: "d", // d is correct for question 45
+        46: "b", // b is correct for question 46
+        47: "a", // a is correct for question 47
+        48: "b", // b is correct for question 48
+        49: "b", // b is correct for question 49
+        50: "c", // c is correct for question 50
+        51: "c", // c is correct for question 51
+        52: "d", // d is correct for question 52
+        53: "d", // d is correct for question 53
+        54: "d", // d is correct for question 54
+        55: "a", // a is correct for question 55
+        56: "b", // b is correct for question 56
+        57: "a", // a is correct for question 57
+        58: "c", // c is correct for question 58
+        59: "d", // d is correct for question 59
+        60: "c", // c is correct for question 60
+        61: "b", // b is correct for question 61
+        62: "b", // b is correct for question 62
+        63: "c", // c is correct for question 63
+        64: "c", // c is correct for question 64
+        65: "d", // d is correct for question 65
+        66: "d", // d is correct for question 66
+        67: "d", // d is correct for question 67
+        68: "c", // c is correct for question 68
+        69: "d", // d is correct for question 69
+        70: "d", // d is correct for question 70
+        71: "c", // c is correct for question 71
+        72: "c", // c is correct for question 72
+        73: "c", // c is correct for question 73
+        74: "d", // d is correct for question 74
+        75: "b", // b is correct for question 75
+        76: "a", // a is correct for question 76
+        77: "c", // c is correct for question 77
+        78: "b", // b is correct for question 78
+        79: "a", // a is correct for question 79
+        80: "d", // d is correct for question 80
+        81: "a", // a is correct for question 81
+        82: "c", // c is correct for question 82
+        83: "a", // a is correct for question 83
+        84: "b", // b is correct for question 84
+        85: "d", // d is correct for question 85
+        86: "d", // d is correct for question 86
+        87: "c", // c is correct for question 87
+        88: "d", // d is correct for question 88
+        89: "b", // b is correct for question 89
+        90: "b", // b is correct for question 90
+        91: "c", // c is correct for question 91
+        92: "a", // a is correct for question 92
+        93: "a", // a is correct for question 93
+        94: "d", // d is correct for question 94
+        95: "d", // d is correct for question 95
+        96: "b", // b is correct for question 96
+      };
+
+      const answeredCorrectly = {};
+      let score = 0;
+      const totalQuestions = Object.keys(correctAnswers).length;
+
+      // Unique keys for this quiz
+      const quizId = "quiz1";
+      const scoreKey = `${quizId}_score`;
+      const highScoreKey = `${quizId}_highScore`;
+      const answersKey = `${quizId}_answers`;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("total-questions").textContent = totalQuestions;
+
+        const savedScore = localStorage.getItem(scoreKey);
+        const savedHighScore = localStorage.getItem(highScoreKey);
+        const savedAnswers = localStorage.getItem(answersKey);
+
+        if (savedScore) {
+          score = parseInt(savedScore);
+          document.getElementById("score").textContent = score;
+        }
+
+        if (savedHighScore) {
+          document.getElementById("high-score").textContent = savedHighScore;
+        }
+
+        if (savedAnswers) {
+          const parsedAnswers = JSON.parse(savedAnswers);
+          Object.keys(parsedAnswers).forEach((qNum) => {
+            answeredCorrectly[qNum] = parsedAnswers[qNum];
+            if (parsedAnswers[qNum]) {
+              const correctValue = correctAnswers[qNum];
+              document.querySelector(
+                `input[name="q${qNum}"][value="${correctValue}"]`
+              ).checked = true;
+
+              const feedbackElement = document.getElementById(
+                `feedback${qNum}`
+              );
+              feedbackElement.textContent = "Correct!";
+              feedbackElement.className = "feedback correct";
+              feedbackElement.style.display = "block";
+            }
+          });
+        }
+      });
+
+      function checkAnswer(questionNumber, selectedAnswer) {
+        const feedbackElement = document.getElementById(
+          `feedback${questionNumber}`
+        );
+        const scoreElement = document.getElementById("score");
+        const highScoreElement = document.getElementById("high-score");
+
+        const wasAlreadyCorrect = answeredCorrectly[questionNumber];
+
+        if (selectedAnswer === correctAnswers[questionNumber]) {
+          feedbackElement.textContent = "Correct! Well done!";
+          feedbackElement.className = "feedback correct";
+
+          if (!wasAlreadyCorrect) {
+            answeredCorrectly[questionNumber] = true;
+            score++;
+            scoreElement.textContent = score;
+            saveToLocalStorage();
+
+            const currentHighScore = parseInt(
+              localStorage.getItem(highScoreKey) || 0
+            );
+            if (score > currentHighScore) {
+              localStorage.setItem(highScoreKey, score);
+              highScoreElement.textContent = score;
+            }
+          }
+        } else {
+          feedbackElement.textContent = "Incorrect. Try again!";
+          feedbackElement.className = "feedback incorrect";
+
+          if (wasAlreadyCorrect) {
+            answeredCorrectly[questionNumber] = false;
+            score--;
+            scoreElement.textContent = score;
+            saveToLocalStorage();
+          }
+        }
+
+        feedbackElement.style.display = "block";
+      }
+
+      function saveToLocalStorage() {
+        localStorage.setItem(scoreKey, score);
+        localStorage.setItem(answersKey, JSON.stringify(answeredCorrectly));
+      }
+
+      function resetQuiz() {
+        score = 0;
+        for (const qNum in answeredCorrectly) {
+          answeredCorrectly[qNum] = false;
+        }
+
+        document.getElementById("score").textContent = "0";
+
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.checked = false;
+        });
+
+        document.querySelectorAll(".feedback").forEach((feedback) => {
+          feedback.style.display = "none";
+        });
+
+        localStorage.removeItem(scoreKey);
+        localStorage.removeItem(answersKey);
+        // High score remains
+      }
+    </script>
+  </body>
+</html>
