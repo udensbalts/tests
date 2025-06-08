@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datorsistēmu un datortīklu uzbūve</title>
+    <title>Datu bāzu tehnoloģijas</title>
     <ul>
       <li><a href="progrVal.html">1. ProgrVal</a></li>
       <li><a href="uzbuve.html">2. Uzbuve</a></li>
@@ -17,111 +17,111 @@
       <div>High Score: <span id="high-score">0</span></div>
     </div>
 
-    <h1>Datorsistēmu uzbūve</h1>
+    <h1>Datu bāzes un SQL</h1>
 
     <div class="question">
-      <p>1. Kas ir cietā diska (HDD) cilindri?</p>
+      <p>1. Kura nav datubāzu pārvaldības (vadības) sistēma?</p>
       <label>
         <input type="radio" name="q1" value="a" onclick="checkAnswer(1, 'a')" />
-        a) celiņu kopums ar vienādiem numuriem </label
+        a) PHP </label
       ><br />
       <label>
         <input type="radio" name="q1" value="b" onclick="checkAnswer(1, 'b')" />
-        b) disku kopums ar vienādiem nosaukumiem </label
+        b) Oracle </label
       ><br />
       <label>
         <input type="radio" name="q1" value="c" onclick="checkAnswer(1, 'c')" />
-        c) failu sistēmas elementi </label
+        c) MySQL </label
       ><br />
       <label>
         <input type="radio" name="q1" value="d" onclick="checkAnswer(1, 'd')" />
-        d) cieto disku numerācija
+        d) MS Access
       </label>
       <div id="feedback1" class="feedback"></div>
     </div>
 
     <div class="question">
-      <p>
-        2. Kādu tehnoloģiju izmanto tintes printeros, lai paātrinātu izdruku?
-      </p>
+      <p>2. Kas ir primārā atslēga datu tabulā?</p>
       <label>
         <input type="radio" name="q2" value="a" onclick="checkAnswer(2, 'a')" />
-        a) burbuļtehnoloģiju </label
+        a) pirmais lauks tabulā </label
       ><br />
       <label>
         <input type="radio" name="q2" value="b" onclick="checkAnswer(2, 'b')" />
-        b) pjezotehnoloģiju </label
+        b) unikāls lauks (lauki) kas identificē datu tabulas ierakstu </label
       ><br />
       <label>
         <input type="radio" name="q2" value="c" onclick="checkAnswer(2, 'c')" />
-        c) papīra uzsildīšanu </label
+        c) skaitļu lauks (lauki) </label
       ><br />
       <label>
         <input type="radio" name="q2" value="d" onclick="checkAnswer(2, 'd')" />
-        d) tintes uzsildīšanu
+        d) lauks (lauki), kura vērtība pieaug par viens
       </label>
       <div id="feedback2" class="feedback"></div>
     </div>
 
     <div class="question">
-      <p>3. Kas tiek uznests lāzeru printeros uz foto veltņa?</p>
+      <p>3. Kas ir datubāze?</p>
       <label>
         <input type="radio" name="q3" value="a" onclick="checkAnswer(3, 'a')" />
-        a) tinte </label
+        a) liela tabula ar sākotnējiem datiem </label
       ><br />
       <label>
         <input type="radio" name="q3" value="b" onclick="checkAnswer(3, 'b')" />
-        b) papīrs </label
+        b) sistematizēta informācijas glabātuve </label
       ><br />
       <label>
         <input type="radio" name="q3" value="c" onclick="checkAnswer(3, 'c')" />
-        c) toneris </label
+        c) saraksts ar kolonnu un rindu nosaukumiem </label
       ><br />
       <label>
         <input type="radio" name="q3" value="d" onclick="checkAnswer(3, 'd')" />
-        d) elektroni
+        d) vaicājumu kopums, kas veido tabulas
       </label>
       <div id="feedback3" class="feedback"></div>
     </div>
 
     <div class="question">
-      <p>4. Ko izmanto, lai attēlu vai tekstu ievadītu datorā?</p>
+      <p>
+        4. Vai relāciju datubāzes tabulā var būt lauki ar vienādiem nosaukumiem?
+      </p>
       <label>
         <input type="radio" name="q4" value="a" onclick="checkAnswer(4, 'a')" />
-        a) printeri </label
+        a) jā, jebkurā skaitā </label
       ><br />
       <label>
         <input type="radio" name="q4" value="b" onclick="checkAnswer(4, 'b')" />
-        b) ploteri </label
+        b) nevar </label
       ><br />
       <label>
         <input type="radio" name="q4" value="c" onclick="checkAnswer(4, 'c')" />
-        c) telpisko manipulatoru </label
+        c) jā, bet ne vairāk kā 4 </label
       ><br />
       <label>
         <input type="radio" name="q4" value="d" onclick="checkAnswer(4, 'd')" />
-        d) skeneri
+        d) atkarīgs no datubāzes pārvaldības sistēmas
       </label>
       <div id="feedback4" class="feedback"></div>
     </div>
 
     <div class="question">
-      <p>5. Kādos printeros izmanto burbuļtehnoloģiju?</p>
+      <p>5. Kāds ir primārās atslēgas lauka uzdevums?</p>
       <label>
         <input type="radio" name="q5" value="a" onclick="checkAnswer(5, 'a')" />
-        a) adatu printeros </label
+        a) izdzēsto ierakstu numuru glabāšana </label
       ><br />
       <label>
         <input type="radio" name="q5" value="b" onclick="checkAnswer(5, 'b')" />
-        b) lāzeru printeros </label
+        b) ieraksta lauku saskaitīšana </label
       ><br />
       <label>
         <input type="radio" name="q5" value="c" onclick="checkAnswer(5, 'c')" />
-        c) tintes printeros </label
+        c) ierakstu viennozīmīga identificēšana </label
       ><br />
       <label>
         <input type="radio" name="q5" value="d" onclick="checkAnswer(5, 'd')" />
-        d) gan lāzeru, gan tintes printeros
+        d) tekošā ieraksta numura glabāšana
       </label>
       <div id="feedback5" class="feedback"></div>
     </div>
@@ -2631,73 +2631,11 @@
     <script>
       // Correct answers for each question
       const correctAnswers = {
-        1: "a", // a is correct for question 1
-        2: "a", // a is correct for question 2
-        3: "d", // d is correct for question 3
-        4: "d", // d is correct for question 4
-        5: "c", // c is correct for question 5
-        6: "a", // a is correct for question 6
-        7: "d", // d is correct for question 7
-        8: "c", // c is correct for question 8
-        9: "d", // d is correct for question 9
-        10: "c", // c is correct for question 10
-        11: "b", // b is correct for question 11
-        12: "d", // d is correct for question 12
-        13: "a", // a is correct for question 13
-        14: "d", // d is correct for question 14
-        15: "c", // c is correct for question 15
-        16: "b", // b is correct for question 16
-        17: "d", // d is correct for question 17
-        18: "c", // c is correct for question 18
-        19: "b", // b is correct for question 19
-        20: "c", // c is correct for question 20
-        21: "d", // d is correct for question 21
-        22: "a", // a is correct for question 22
-        23: "a", // a is correct for question 23
-        24: "c", // c is correct for question 24
-        25: "a", // a is correct for question 25
-        26: "b", // b is correct for question 26
-        27: "c", // c is correct for question 27
-        28: "b", // b is correct for question 28
-        29: "b", // b is correct for question 29
-        30: "b", // b is correct for question 30
-        31: "c", // c is correct for question 31
-        32: "b", // b is correct for question 32
-        33: "c", // c is correct for question 33
-        34: "c", // c is correct for question 34
-        35: "d", // d is correct for question 35
-        36: "c", // c is correct for question 36
-        37: "d", // d is correct for question 37
-        38: "c", // c is correct for question 38
-        39: "a", // a is correct for question 39
-        40: "c", // c is correct for question 40
-        41: "a", // a is correct for question 41
-        42: "c", // c is correct for question 42
-        43: "a", // a is correct for question 43
-        44: "b", // b is correct for question 44
-        45: "a", // a is correct for question 45
-        46: "d", // d is correct for question 46
-        47: "b", // b is correct for question 47
-        48: "b", // b is correct for question 48
-        49: "b", // b is correct for question 49
-        50: "b", // b is correct for question 50
-        51: "b", // b is correct for question 51
-        52: "c", // c is correct for question 52
-        53: "a", // a is correct for question 53
-        54: "c", // c is correct for question 54
-        55: "a", // a is correct for question 55
-        56: "d", // d is correct for question 56
-        57: "d", // d is correct for question 57
-        58: "c", // c is correct for question 58
-        59: "a", // a is correct for question 59
-        60: "a", // a is correct for question 60
-        61: "a", // a is correct for question 61
-        62: "a", // a is correct for question 62
-        63: "d", // d is correct for question 63
-        64: "d", // d is correct for question 64
-        65: "a", // a is correct for question 65
-        66: "c", // c is correct for question 66
-        67: "b", // b is correct for question 67
+        1: "a", // a is correct answer for question 1
+        2: "b", // b is correct answer for question 2
+        3: "b", // b is correct answer for question 3
+        4: "b", // b is correct answer for question 4
+        5: "c", // c is correct answer for question 5
       };
 
       const answeredCorrectly = {};
@@ -2705,7 +2643,7 @@
       const totalQuestions = Object.keys(correctAnswers).length;
 
       // Unique keys for this quiz
-      const quizId = "quiz2";
+      const quizId = "quiz3";
       const scoreKey = `${quizId}_score`;
       const highScoreKey = `${quizId}_highScore`;
       const answersKey = `${quizId}_answers`;
